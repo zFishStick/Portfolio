@@ -1,0 +1,348 @@
+html{
+    scroll-behavior: smooth;
+}
+
+header{
+  height: 70vh;
+  margin-bottom: 9%;
+  text-align: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #28446E; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #008686; 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #00a6a6; 
+}
+
+.titoloPrincipale{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #28446E;
+    font-size: 100px;
+}
+
+.titoloPrincipale_ridotto{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #28446E;
+  font-size: 40px;
+  text-align: center;
+}
+
+.listaMenu li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-right: 1.5vw;
+    display: inline;
+    position: relative;
+}
+
+.listaMenu a{
+    text-decoration: none;
+    color: #28446E;
+}
+
+.listaMenu a::before{
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #28446E;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+}
+
+.listaMenu a:hover::before {
+    transform: scaleX(1);
+}
+
+.paragrafoPresentazione{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 60%;
+    -webkit-animation: fade-in-bottom 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-bottom 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    color: #161E3C;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.ciao{
+    color:rgb(2, 134, 134);
+}
+
+.tastoScrollPagina, .shake{
+    max-width: fit-content;
+    color: #28446E;
+    font-size: 1.7vw;
+    -webkit-animation: shake 10s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+    animation: shake 10s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+}
+
+/*MOVIMENTO TESTO*/
+@-webkit-keyframes shake {
+    0%,
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateY(8px);
+              transform: translateY(8px);
+    }
+    80% {
+      -webkit-transform: translateY(6.4px);
+              transform: translateY(6.4px);
+    }
+    90% {
+      -webkit-transform: translateY(-6.4px);
+              transform: translateY(-6.4px);
+    }
+  }
+  @keyframes shake {
+    0%,
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateY(8px);
+              transform: translateY(8px);
+    }
+    80% {
+      -webkit-transform: translateY(6.4px);
+              transform: translateY(6.4px);
+    }
+    90% {
+      -webkit-transform: translateY(-6.4px);
+              transform: translateY(-6.4px);
+    }
+  }
+  
+  @keyframes shake {
+    0%,
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: translateY(8px);
+              transform: translateY(8px);
+    }
+    80% {
+      -webkit-transform: translateY(6.4px);
+              transform: translateY(6.4px);
+    }
+    90% {
+      -webkit-transform: translateY(-6.4px);
+              transform: translateY(-6.4px);
+    }
+  }
+  
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.biografia{
+    margin-top: 10%;
+    margin-bottom: 11%;
+    height: 50vh;
+    scroll-margin-top: 1vh;
+    color: #161E3C;
+}
+
+.biografia h2{
+    font-size: 2.5vw;
+}
+
+.fade{
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+.fade1{
+  opacity: 1;
+  transition: opacity 1.5s;
+}
+
+.paragrafo{
+  font-size: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.immagineGabriel1{
+    width: 65%;
+    border: #28446E solid 2.5px;
+    margin-left: 10%;
+    border-radius: 5%;
+    position: relative;
+    display: block;
+    float: right;
+}
+
+.iconaScendi{
+  font-size: 50px;
+  color: #28446E; 
+  margin-top: 70px;
+}
+
+.secondoParagrafo{
+    width: 42vw;
+    float: right;
+    line-height: 180%;
+    text-align: end;
+    margin-right: 10%;
+    scroll-margin-top: 5vh;
+}
+
+.immagineProgrammi{
+    float: left;
+    width: 30%;
+    margin-left: 8%;
+}
+
+.scroll-scale{
+  scroll-margin-top: 7vh;
+}
+
+.terzoParagrafo{
+  line-height: 180%;
+  margin-left: 10%;
+  float: left;
+  width: 45vw;
+  scroll-margin-top: 5vh;
+}
+
+.immagineTeam{
+  width: 30%;
+  float: right;
+  margin-right: 8%;
+}
+
+.contatti{
+  margin-top: 35%;
+}
+
+.profiliSocial{ 
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(160, 219, 219);
+    width: 45vw;
+    border-radius: 10px;
+}
+
+.titoloContatti{
+    font-size: 3.5vw;
+    color: #28446E;
+    margin-bottom: 1% ;
+    text-align: center;
+}
+
+.listaSocial{
+    list-style: none;
+    margin-top: 0%;
+    columns: 2;
+    width: 60vw;
+    padding: 0;
+    color: #28446E;
+}
+
+.listaSocial li{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2vw;
+    position: relative;
+    width: fit-content;
+    margin-left: 5%;
+    margin-bottom: 4%;
+    height: fit-content;
+}
+
+.listaSocial a{
+    text-decoration: none;
+    color: #28446E;
+}
+
+.iconaMail, .iconaInsta{
+  position: relative;
+  top: 1px;
+}
+
