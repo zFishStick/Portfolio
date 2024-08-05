@@ -71,6 +71,10 @@ header{
     transform: scaleX(1);
 }
 
+.menu-corrente{
+  font-size: 150%;
+}
+
 .paragrafoPresentazione{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     max-width: 60%;
@@ -275,9 +279,7 @@ header{
 }
 
 .immagineProgrammi{
-    float: left;
-    width: 30%;
-    margin-left: 8%;
+    width: 80%;
 }
 
 .scroll-scale{
@@ -293,9 +295,8 @@ header{
 }
 
 .immagineTeam{
-  width: 30%;
+  width: 80%;
   float: right;
-  margin-right: 8%;
 }
 
 .contatti{

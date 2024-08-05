@@ -1,3 +1,28 @@
+const section = document.querySelectorAll("section")
+const menu_sections = ["home", "biografia", "formazione", "contatti"]
+
+loadBiography()
+loadFormation()
+loadContacts()
+
+function loadBiography() {
+    $(document).ready(function(){
+        $("#biografia").load("HTML-CSS-JS/Pages/Html/Biography.html");
+    });
+}
+
+function loadFormation() {
+    $(document).ready(function(){
+        $("#formazione").load("HTML-CSS-JS/Pages/Html/Formation.html");
+    });
+}
+
+function loadContacts() {
+    $(document).ready(function(){
+        $("#contatti").load("HTML-CSS-JS/Pages/Html/Contacts.html");
+    });
+}
+
 // Funzione per mostrare o nascondere gli elementi in base allo scroll
 function updateElementVisibility() {
     const hiddenElements = document.querySelectorAll('.fade, .fade1');
@@ -24,3 +49,6 @@ function updateElementVisibility() {
   
   // Chiamare la funzione una volta all'inizio per verificare lo stato iniziale degli elementi
   updateElementVisibility();
+
+
+
