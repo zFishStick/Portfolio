@@ -1,3 +1,4 @@
+const path = "HTML-CSS-JS/Html/"
 const section = document.querySelectorAll("section")
 const menu_sections = ["home", "biografia", "formazione", "contatti"]
 
@@ -7,19 +8,19 @@ loadContacts()
 
 function loadBiography() {
     $(document).ready(function(){
-        $("#biografia").load("HTML-CSS-JS/Pages/Html/Biography.html");
+        $("#biografia").load(path + "Biography.html");
     });
 }
 
 function loadFormation() {
     $(document).ready(function(){
-        $("#formazione").load("HTML-CSS-JS/Pages/Html/Formation.html");
+        $("#formazione").load(path + "Formation.html");
     });
 }
 
 function loadContacts() {
     $(document).ready(function(){
-        $("#contatti").load("HTML-CSS-JS/Pages/Html/Contacts.html");
+        $("#contatti").load(path + "Contacts.html");
     });
 }
 
