@@ -38,19 +38,20 @@
   }
 
   .biografia {
-    margin-top: 30px;
-    height: 100vh;
+    margin-bottom: 30px;
+    height: 100%;
     scroll-margin-top: 1vh;
     color: #161E3C;
   }
 
   .iconaScendi{
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 35px;
   }
 
   .secondoParagrafo {
     text-align: center;
+    margin-right: 0;
   }
 
   .immagineTeam{

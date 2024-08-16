@@ -3,8 +3,8 @@ html {
 }
 
 header {
-  height: 70vh;
-  margin-bottom: 9%;
+  height: 20rem;
+  margin-bottom: 20rem;
   text-align: center;
 }
 
@@ -114,6 +114,10 @@ header {
 .ciao {
   font-size: 40px;
   color: rgb(2, 134, 134);
+}
+
+.tastoScrollPagina{
+  margin-top: 200px;
 }
 
 .tastoScrollPagina,
@@ -250,9 +254,8 @@ header {
 }
 
 .biografia {
-  margin-top: 10%;
-  margin-bottom: 11%;
-  height: 70vh;
+  margin-top: 50px;
+  height: 35rem;
   scroll-margin-top: 1vh;
   color: #161E3C;
 }
@@ -283,6 +286,7 @@ header {
 }
 
 .iconaScendi {
+  margin-top: 40px;
   font-size: 50px;
   color: #28446E;
 }
