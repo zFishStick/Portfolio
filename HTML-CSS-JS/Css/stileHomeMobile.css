@@ -1,0 +1,60 @@
+/* If the screen size is 666px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 768px) {
+  .titoloPrincipale {
+    font-size: 17vw;
+  }
+
+  .listaMenu li {
+    font-size: 4vw;
+  }
+
+  .paragrafoPresentazione {
+    font-size: 6vw;
+  }
+
+  .ciao {
+    font-size: 8vw;
+  }
+
+  .tastoScrollPagina,
+  .shake {
+    font-size: 5vw;
+  }
+
+  /* Biography */
+
+  .content{
+    text-align: center;
+  }
+
+  .content img {
+    width: 400px;
+    margin-bottom: 10px;
+  }
+
+  .content p {
+    font-size: 20px;
+    line-height: normal !important;
+  }
+
+  .biografia {
+    margin-top: 10%;
+    margin-bottom: 11%;
+    height: 100vh;
+    scroll-margin-top: 1vh;
+    color: #161E3C;
+  }
+
+  .iconaScendi{
+    margin-top: 10px;
+    font-size: 35px;
+  }
+
+  .secondoParagrafo {
+    text-align: center;
+  }
+
+  .immagineTeam{
+    width: max-content;
+  }
+}

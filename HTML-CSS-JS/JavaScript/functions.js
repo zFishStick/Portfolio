@@ -24,7 +24,7 @@ function loadContacts() {
     });
 }
 
-// Funzione per mostrare o nascondere gli elementi in base allo scroll
+// Funzione per mostrare o nascondere gli elementi in base allo scroll del mouse
 function updateElementVisibility() {
     const hiddenElements = document.querySelectorAll('.fade, .fade1');
     
@@ -45,10 +45,8 @@ function updateElementVisibility() {
 
   }
   
-  // Aggiungi l'evento di scroll per chiamare la funzione
   window.addEventListener('scroll', updateElementVisibility);
   
-  // Chiamare la funzione una volta all'inizio per verificare lo stato iniziale degli elementi
   updateElementVisibility();
 
 
