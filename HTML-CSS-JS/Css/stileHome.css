@@ -34,15 +34,9 @@ header {
   font-size: 120px;
 }
 
-.titoloPrincipale_ridotto {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #28446E;
-  font-size: 40px;
-}
-
 .listaMenu li {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 25px;
+  font-size: 4.5vh;
   text-transform: uppercase;
   margin-right: 1.5vw;
   display: inline;
@@ -258,6 +252,7 @@ header {
   height: 35rem;
   scroll-margin-top: 1vh;
   color: #161E3C;
+  padding-top: 2rem;
 }
 
 .biografia h2 {
@@ -309,42 +304,39 @@ header {
   width: 350px;
 }
 
-.contatti {
-  margin-top: 35%;
-}
-
 .profiliSocial {
   margin-left: auto;
   margin-right: auto;
   background-color: rgb(160, 219, 219);
-  width: 45vw;
+  width: 40rem;
   border-radius: 10px;
+  height: 21rem;
+  margin-bottom: 20px;
 }
 
-.titoloContatti {
-  font-size: 3.5vw;
+.titolo-contatti {
+  font-size: 25px;
   color: #28446E;
   margin-bottom: 1%;
-  text-align: center;
 }
 
 .listaSocial {
   list-style: none;
-  margin-top: 0%;
-  columns: 2;
-  width: 60vw;
+  width: 17rem;
   padding: 0;
   color: #28446E;
+  line-height: 2.8;
+  margin-bottom: 0;
+  margin-top: 1rem;
 }
 
 .listaSocial li {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 2vw;
-  position: relative;
+  font-size: 25px;
   width: fit-content;
-  margin-left: 5%;
-  margin-bottom: 4%;
   height: fit-content;
+  display: flex;
+  align-items: center;
 }
 
 .listaSocial a {
@@ -352,8 +344,36 @@ header {
   color: #28446E;
 }
 
-.iconaMail,
-.iconaInsta {
-  position: relative;
-  top: 1px;
+.immagine-github{
+  width: 20rem;
+  border-radius: 20px;
+}
+
+.github-link{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-decoration: none;
+  color: #28446E;
+  font-size: 25px;
+}
+
+.icona-git{
+  font-size: 25px;
+}
+
+.first-col{
+  flex: 0 0 0% !important;
+}
+
+.github{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+
+.github-link{
+  width: fit-content;
+  display: flex;
+  align-items: center;
 }

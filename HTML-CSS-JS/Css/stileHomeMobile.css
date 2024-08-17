@@ -1,4 +1,3 @@
-/* If the screen size is 666px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 768px) {
   .titoloPrincipale {
     font-size: 17vw;
@@ -23,7 +22,7 @@
 
   /* Biography */
 
-  .content{
+  .content {
     text-align: center;
   }
 
@@ -42,11 +41,16 @@
     height: 100%;
     scroll-margin-top: 1vh;
     color: #161E3C;
+    padding-top: 1rem;
   }
 
-  .iconaScendi{
-    margin-top: 20px;
+  .iconaScendi {
+    margin-top: 0;
     font-size: 35px;
+  }
+
+  .paragrafo {
+    padding-bottom: 50px;
   }
 
   .secondoParagrafo {
@@ -54,7 +58,46 @@
     margin-right: 0;
   }
 
-  .immagineTeam{
-    width: max-content;
+  .immagineGabriel1 {
+    width: 250px !important;
   }
+
+  .immagineProgrammi {
+    width: 250px !important;
+  }
+
+  .immagineTeam {
+    width: 250px !important;
+  }
+
+
+  /* Contatti */
+  .profiliSocial {
+    height: 40rem;
+    width: 22rem;
+  }
+
+  .first-row, .second-col {
+    width: fit-content !important;
+    justify-content: center !important;
+    align-items: center;
+    padding-right: 0 !important;
+  }
+
+  .listaSocial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .titolo-contatti {
+    font-size: 15px;
+  }
+
+  .github-link, .icona-git{
+    font-size: 50px;
+  }
+
 }
