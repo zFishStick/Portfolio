@@ -1,4 +1,11 @@
 @media screen and (max-width: 768px) {
+  header {
+    height: 41rem;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
   .titoloPrincipale {
     font-size: 17vw;
   }
@@ -20,6 +27,10 @@
     font-size: 5vw;
   }
 
+  .tastoScrollPagina{
+    margin-top: auto;
+  }
+
   /* Biography */
 
   .content {
@@ -33,12 +44,13 @@
 
   .content p {
     font-size: 20px;
-    line-height: normal !important;
+    line-height: 35px !important;
+    margin-bottom: 5px !important;
   }
 
   .biografia {
     margin-bottom: 30px;
-    height: 100%;
+    height: fit-content;
     scroll-margin-top: 1vh;
     color: #161E3C;
     padding-top: 1rem;
@@ -49,13 +61,12 @@
     font-size: 35px;
   }
 
-  .paragrafo {
-    padding-bottom: 50px;
+  .content{
+    flex-direction: column-reverse;
   }
 
-  .secondoParagrafo {
-    text-align: center;
-    margin-right: 0;
+  .reverse{
+    flex-direction: column;
   }
 
   .immagineGabriel1 {

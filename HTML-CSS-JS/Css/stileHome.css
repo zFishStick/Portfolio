@@ -3,7 +3,7 @@ html {
 }
 
 header {
-  height: 20rem;
+  height: 25rem;
   margin-bottom: 20rem;
   text-align: center;
 }
@@ -248,11 +248,11 @@ header {
 }
 
 .biografia {
-  margin-top: 50px;
-  height: 35rem;
-  scroll-margin-top: 1vh;
+  margin-top: 10px;
+  height: fit-content;
+  scroll-margin-top: 2vh;
   color: #161E3C;
-  padding-top: 2rem;
+  padding-top: 20px;
 }
 
 .biografia h2 {
@@ -272,16 +272,23 @@ header {
 .paragrafo {
   font-size: 27px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 13vh;
 }
 
 .immagineGabriel1 {
-  width: 350px;
+  width: 62.5vh;
+  max-width: 30%;
   border: #28446E solid 2.5px;
   border-radius: 5%;
 }
 
+.content{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
 .iconaScendi {
-  margin-top: 40px;
   font-size: 50px;
   color: #28446E;
 }
@@ -293,7 +300,8 @@ header {
 }
 
 .immagineProgrammi {
-  width: 350px;
+  width: 64vh;
+  max-width: 30%;
 }
 
 .scroll-scale {
@@ -301,7 +309,8 @@ header {
 }
 
 .immagineTeam {
-  width: 350px;
+  width: 64vh;
+  max-width: 30%;
 }
 
 .profiliSocial {
