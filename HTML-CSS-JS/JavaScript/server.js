@@ -5,7 +5,7 @@ const AWS = require('aws-sdk');
 const fs = require('fs');
 
 const app = express();
-const port = 3000;
+const port = 3001;
 
 const url = 'mongodb://localhost:27017'; // Cambia se usi un'URL diversa
 const dbName = 'Projects';
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 });
 
 // Endpoint creato automaticamente
-app.get('/api/games', async (req, res) => {
+app.get('/api/projects', async (req, res) => {
     const client = new MongoClient(url, { useUnifiedTopology: true });
 
     try {
@@ -38,9 +38,9 @@ app.get('/api/games', async (req, res) => {
 
         const db = client.db(dbName);
         const collection = db.collection('projects');
-        const games = await collection.find().toArray();
+        const projects = await collection.find().toArray();
 
-        res.json(games);
+        res.json(projects);
     } catch (err) {
         console.error(err);
         res.status(500).send('Internal Server Error');
