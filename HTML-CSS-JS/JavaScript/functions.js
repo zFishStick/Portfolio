@@ -1,6 +1,6 @@
 const path = "HTML-CSS-JS/Html/"
 const section = document.querySelectorAll("section")
-const menu_sections = ["home", "biografia", "formazione", "contatti"]
+const menu_sections = ["home", "biografia", "progetti", "contatti"]
 
 loadBiography()
 loadFormation()
@@ -14,7 +14,7 @@ function loadBiography() {
 
 function loadFormation() {
     $(document).ready(function(){
-        $("#formazione").load(path + "Formation.html");
+        $("#progetti").load(path + "Projects.html");
     });
 }
 

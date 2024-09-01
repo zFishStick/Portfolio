@@ -386,3 +386,25 @@ header {
   display: flex;
   align-items: center;
 }
+
+/* Projects css */
+#main-grid {
+  display: flex;
+  justify-content: center;
+}
+#main-grid .game-img {
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 0px 0px 10px 0px #000000;
+}
+#main-grid .game-name {
+  font-size: 2vw;
+  font-weight: 500;
+}
+#main-grid .img-link img {
+  transition: transform 0.5s ease;
+}
+#main-grid .img-link:hover img {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
