@@ -1,5 +1,3 @@
-const path = require('path');
-require('dotenv').config({ path: path.join(__dirname, '.gitignore/.env') });
 const express = require('express');
 const { MongoClient } = require('mongodb');
 const path = require('path');
