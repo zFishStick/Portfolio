@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Avvia Server Express",
+        "type": "shell",
+        "command": "node",
+        "args": [
+          "./JavaScript/server.js"  // Sostituisci con il nome del file principale del tuo server Express
+        ],
+        "isBackground": true,
+        "problemMatcher": [],
+        "runOptions": {
+          "runOn": "folderOpen"  // Avvia automaticamente all'apertura della cartella
+        }
+      }
+    ]
+  }
+  

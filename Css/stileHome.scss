@@ -1,3 +1,5 @@
+$text_color: #28446E;
+
 html {
   scroll-behavior: smooth;
 }
@@ -8,61 +10,60 @@ header {
   text-align: center;
 }
 
-/* width */
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 15px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: #28446E;
+  background: $text_color;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #008686;
-}
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #00a6a6;
+  &:hover {
+    background: #00a6a6;
+  }
 }
 
 .titoloPrincipale {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #28446E;
+  color: $text_color;
   font-size: 120px;
 }
 
-.listaMenu li {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 4.5vh;
-  text-transform: uppercase;
-  margin-right: 1.5vw;
-  display: inline;
-  position: relative;
-}
+.listaMenu {
+  li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4.5vh;
+    text-transform: uppercase;
+    margin-right: 1.5vw;
+    display: inline;
+    position: relative;
+  }
 
-.listaMenu a {
-  text-decoration: none;
-  color: #28446E;
-}
+  a {
+    text-decoration: none;
+    color: $text_color;
 
-.listaMenu a::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #28446E;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $text_color;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
 
-.listaMenu a:hover::before {
-  transform: scaleX(1);
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
 }
 
 .menu-corrente {
@@ -110,7 +111,7 @@ header {
   color: rgb(2, 134, 134);
 }
 
-.tastoScrollPagina{
+.tastoScrollPagina {
   margin-top: 200px;
 }
 
@@ -123,26 +124,18 @@ header {
   width: fit-content;
 }
 
-/*MOVIMENTO TESTO*/
 @-webkit-keyframes shake {
-
-  0%,
-  100% {
+  0%, 100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
-  10%,
-  30%,
-  50%,
-  70% {
+  10%, 30%, 50%, 70% {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
 
-  20%,
-  40%,
-  60% {
+  20%, 40%, 60% {
     -webkit-transform: translateY(8px);
     transform: translateY(8px);
   }
@@ -159,24 +152,17 @@ header {
 }
 
 @keyframes shake {
-
-  0%,
-  100% {
+  0%, 100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
-  10%,
-  30%,
-  50%,
-  70% {
+  10%, 30%, 50%, 70% {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
 
-  20%,
-  40%,
-  60% {
+  20%, 40%, 60% {
     -webkit-transform: translateY(8px);
     transform: translateY(8px);
   }
@@ -191,41 +177,6 @@ header {
     transform: translateY(-6.4px);
   }
 }
-
-@keyframes shake {
-
-  0%,
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70% {
-    -webkit-transform: translateY(-8px);
-    transform: translateY(-8px);
-  }
-
-  20%,
-  40%,
-  60% {
-    -webkit-transform: translateY(8px);
-    transform: translateY(8px);
-  }
-
-  80% {
-    -webkit-transform: translateY(6.4px);
-    transform: translateY(6.4px);
-  }
-
-  90% {
-    -webkit-transform: translateY(-6.4px);
-    transform: translateY(-6.4px);
-  }
-}
-
 
 @-webkit-keyframes fade-in {
   0% {
@@ -248,15 +199,15 @@ header {
 }
 
 .biografia {
-  margin-top: 10px;
-  height: fit-content;
+  margin-top: 20px;
+  height: 50rem;
   scroll-margin-top: 2vh;
   color: #161E3C;
   padding-top: 20px;
-}
 
-.biografia h2 {
-  font-size: 2.5vw;
+  h2 {
+    font-size: 2.5vw;
+  }
 }
 
 .fade {
@@ -278,11 +229,11 @@ header {
 .immagineGabriel1 {
   width: 62.5vh;
   max-width: 30%;
-  border: #28446E solid 2.5px;
+  border: $text_color solid 2.5px;
   border-radius: 5%;
 }
 
-.content{
+.content {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -290,7 +241,7 @@ header {
 
 .iconaScendi {
   font-size: 50px;
-  color: #28446E;
+  color: $text_color;
 }
 
 .secondoParagrafo {
@@ -325,7 +276,7 @@ header {
 
 .titolo-contatti {
   font-size: 25px;
-  color: #28446E;
+  color: $text_color;
   margin-bottom: 1%;
 }
 
@@ -333,47 +284,49 @@ header {
   list-style: none;
   width: 17rem;
   padding: 0;
-  color: #28446E;
+  color: $text_color;
   line-height: 2.8;
   margin-bottom: 0;
   margin-top: 1rem;
+
+  li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: $text_color;
+  }
 }
 
-.listaSocial li {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 25px;
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-}
-
-.listaSocial a {
-  text-decoration: none;
-  color: #28446E;
-}
-
-.immagine-github{
+.immagine-github {
   width: 20rem;
   border-radius: 20px;
 }
 
-.github-link{
+.github-link {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-decoration: none;
-  color: #28446E;
+  color: $text_color;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.icona-git {
   font-size: 25px;
 }
 
-.icona-git{
-  font-size: 25px;
-}
-
-.first-col{
+.first-col {
   flex: 0 0 0% !important;
 }
 
-.github{
+.github {
   width: fit-content;
   display: flex;
   align-items: center;
@@ -381,30 +334,25 @@ header {
   margin-right: 2rem;
 }
 
-.github-link{
-  width: fit-content;
-  display: flex;
-  align-items: center;
-}
-
 /* Projects css */
 #main-grid {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
 }
-#main-grid .game-img {
-  margin-left: 20px;
-  margin-right: 20px;
-  box-shadow: 0px 0px 10px 0px #000000;
-}
-#main-grid .game-name {
+
+.project-name {
   font-size: 2vw;
   font-weight: 500;
-}
-#main-grid .img-link img {
   transition: transform 0.5s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+  }
 }
-#main-grid .img-link:hover img {
-  transform: translateY(-10px);
-  cursor: pointer;
+
+.proj_link {
+  text-decoration: none;
+  color: $text_color;
 }

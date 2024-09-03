@@ -1,4 +1,4 @@
-const path = "HTML-CSS-JS/Html/"
+const path = "Html/"
 const section = document.querySelectorAll("section")
 const menu_sections = ["home", "biografia", "progetti", "contatti"]
 

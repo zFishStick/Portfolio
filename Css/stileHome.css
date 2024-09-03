@@ -1,0 +1,279 @@
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 25rem;
+  margin-bottom: 20rem;
+  text-align: center;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #28446E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #008686;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00a6a6;
+}
+
+.titoloPrincipale {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #28446E;
+  font-size: 120px;
+}
+
+.listaMenu li {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 4.5vh;
+  text-transform: uppercase;
+  margin-right: 1.5vw;
+  display: inline;
+  position: relative;
+}
+.listaMenu a {
+  text-decoration: none;
+  color: #28446E;
+}
+.listaMenu a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #28446E;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.listaMenu a:hover::before {
+  transform: scaleX(1);
+}
+
+.menu-corrente {
+  font-size: 150%;
+}
+
+.paragrafoPresentazione {
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  animation: fade-in-bottom 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  color: #161E3C;
+}
+@keyframes fade-in-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.ciao {
+  font-size: 40px;
+  color: rgb(2, 134, 134);
+}
+
+.tastoScrollPagina {
+  margin-top: 200px;
+}
+
+.tastoScrollPagina,
+.shake {
+  color: #28446E;
+  font-size: 25px;
+  animation: shake 10s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite both;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  10%, 30%, 50%, 70% {
+    transform: translateY(-8px);
+  }
+  20%, 40%, 60% {
+    transform: translateY(8px);
+  }
+  80% {
+    transform: translateY(6.4px);
+  }
+  90% {
+    transform: translateY(-6.4px);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.biografia {
+  margin-top: 20px;
+  height: 50rem;
+  scroll-margin-top: 2vh;
+  color: #161E3C;
+  padding-top: 20px;
+}
+.biografia h2 {
+  font-size: 2.5vw;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.fade1 {
+  opacity: 1;
+  transition: opacity 1.5s;
+}
+
+.paragrafo {
+  font-size: 27px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  line-height: 13vh;
+}
+
+.immagineGabriel1 {
+  width: 62.5vh;
+  max-width: 30%;
+  border: #28446E solid 2.5px;
+  border-radius: 5%;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.iconaScendi {
+  font-size: 50px;
+  color: #28446E;
+}
+
+.secondoParagrafo {
+  text-align: end;
+  margin-right: 5%;
+  scroll-margin-top: 5vh;
+}
+
+.immagineProgrammi {
+  width: 64vh;
+  max-width: 30%;
+}
+
+.scroll-scale {
+  scroll-margin-top: 7vh;
+}
+
+.immagineTeam {
+  width: 64vh;
+  max-width: 30%;
+}
+
+.profiliSocial {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(160, 219, 219);
+  width: 40rem;
+  border-radius: 10px;
+  height: 21rem;
+  margin-bottom: 20px;
+}
+
+.titolo-contatti {
+  font-size: 25px;
+  color: #28446E;
+  margin-bottom: 1%;
+}
+
+.listaSocial {
+  list-style: none;
+  width: 17rem;
+  padding: 0;
+  color: #28446E;
+  line-height: 2.8;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+.listaSocial li {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 25px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+}
+.listaSocial a {
+  text-decoration: none;
+  color: #28446E;
+}
+
+.immagine-github {
+  width: 20rem;
+  border-radius: 20px;
+}
+
+.github-link {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: none;
+  color: #28446E;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.icona-git {
+  font-size: 25px;
+}
+
+.first-col {
+  flex: 0 0 0% !important;
+}
+
+.github {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+
+/* Projects css */
+#main-grid {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.project-name {
+  font-size: 2vw;
+  font-weight: 500;
+  transition: transform 0.5s ease;
+}
+.project-name:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.proj_link {
+  text-decoration: none;
+  color: #28446E;
+}/*# sourceMappingURL=stileHome.css.map */
