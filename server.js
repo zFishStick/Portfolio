@@ -19,10 +19,11 @@ AWS.config.update({
 const s3 = new AWS.S3();
 const bucketName = 'pesca-games-images';  */
 
-//app.use(express.static(path.join(__dirname, '/')));
+app.use(express.static(path.join(__dirname, '/')));
 app.use('/JavaScript', express.static(path.join(__dirname, '/JavaScript')));
 app.use('/Css', express.static(path.join(__dirname, '/Css')));
 app.use('/Html', express.static(path.join(__dirname, '/Html')));
+app.use('/Immagini', express.static(path.join(__dirname, '/Immagini')));
 
 
 app.get('/', (req, res) => {
@@ -30,7 +31,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/projects', async (req, res) => {
-    const client = new MongoClient(url, { useUnifiedTopology: true });
+    const client = new MongoClient(url);
 
     try {
         await client.connect();
