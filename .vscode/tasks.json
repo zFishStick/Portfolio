@@ -6,7 +6,7 @@
         "type": "shell",
         "command": "node",
         "args": [
-          "./JavaScript/server.js"  // Sostituisci con il nome del file principale del tuo server Express
+          "server.js"  // Sostituisci con il nome del file principale del tuo server Express
         ],
         "isBackground": true,
         "problemMatcher": [],

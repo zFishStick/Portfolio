@@ -26,7 +26,7 @@ app.use('/Html', express.static(path.join(__dirname, '../Html')));
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.get('/api/projects', async (req, res) => {
