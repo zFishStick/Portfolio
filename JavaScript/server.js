@@ -21,7 +21,7 @@ const bucketName = 'pesca-games-images';  */
 
 app.use(express.static(path.join(__dirname, '../')));
 app.use('/Css', express.static(path.join(__dirname, '../Css')));
-app.use('/HTML', express.static(path.join(__dirname, '../HTML')));
+app.use('/Html', express.static(path.join(__dirname, '../Html')));
 app.use('/JavaScript', express.static(path.join(__dirname, '../JavaScript')));
 
 app.get('/', (req, res) => {
