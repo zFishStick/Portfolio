@@ -9,7 +9,7 @@ const port = process.env.PORT || 3001;
 const url = process.env.MONGODB_URI; // Assicurati di configurare questa variabile d'ambiente su Vercel
 const dbName = 'Projects';
 
-// Configura le credenziali AWS
+/* // Configura le credenziali AWS
 AWS.config.update({
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,  
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
@@ -17,7 +17,7 @@ AWS.config.update({
 });
 
 const s3 = new AWS.S3();
-const bucketName = 'pesca-games-images'; 
+const bucketName = 'pesca-games-images';  */
 
 app.use(express.static(path.join(__dirname, '../')));
 
