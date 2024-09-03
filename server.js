@@ -19,11 +19,7 @@ AWS.config.update({
 const s3 = new AWS.S3();
 const bucketName = 'pesca-games-images';  */
 
-app.use(express.static(path.join(__dirname, '../')));
-app.use('/JavaScript', express.static(path.join(__dirname, '../JavaScript')));
-app.use('/Css', express.static(path.join(__dirname, '../Css')));
-app.use('/Html', express.static(path.join(__dirname, '../Html')));
-
+app.use(express.static(path.join(__dirname, '/')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
