@@ -6,7 +6,7 @@ const AWS = require('aws-sdk');
 const app = express();
 const port = process.env.PORT || 3001;
 
-const url = process.env.MONGODB_URI; // Assicurati di configurare questa variabile d'ambiente su Vercel
+const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/Projects';
 const dbName = 'Projects';
 
 /* // Configura le credenziali AWS
