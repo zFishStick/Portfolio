@@ -27,7 +27,7 @@
     font-size: 5vw;
   }
 
-  .tastoScrollPagina{
+  .tastoScrollPagina {
     margin-top: auto;
   }
 
@@ -61,11 +61,11 @@
     font-size: 35px;
   }
 
-  .content{
+  .content {
     flex-direction: column-reverse;
   }
 
-  .reverse{
+  .reverse {
     flex-direction: column;
   }
 
@@ -81,6 +81,11 @@
     width: 250px !important;
   }
 
+  /* Progetti */
+  .projects-container {
+    height: 50vh;
+  }
+
 
   /* Contatti */
   .profiliSocial {
@@ -88,14 +93,15 @@
     width: 22rem;
   }
 
-  .first-row, .second-col {
+  .first-row,
+  .second-col {
     width: fit-content !important;
     justify-content: center !important;
     align-items: center;
     padding-right: 0 !important;
   }
 
-  .listaSocial{
+  .listaSocial {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,7 +113,8 @@
     font-size: 15px;
   }
 
-  .github-link, .icona-git{
+  .github-link,
+  .icona-git {
     font-size: 50px;
   }
 

@@ -2,6 +2,7 @@ const express = require('express');
 const { MongoClient } = require('mongodb');
 const path = require('path');
 const AWS = require('aws-sdk');
+require('dotenv').config()
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -9,7 +10,9 @@ const port = process.env.PORT || 3001;
 const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/Projects';
 const dbName = 'Projects';
 
-/* // Configura le credenziali AWS
+console.log(url)
+
+// Configura le credenziali AWS
 AWS.config.update({
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,  
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
@@ -17,7 +20,7 @@ AWS.config.update({
 });
 
 const s3 = new AWS.S3();
-const bucketName = 'pesca-games-images';  */
+const bucketName = 'projects-images-fish'; 
 
 app.use(express.static(path.join(__dirname, '/')));
 app.use('/JavaScript', express.static(path.join(__dirname, '/JavaScript')));

@@ -4,8 +4,11 @@ async function getProjects() {
         const projects = await response.json();
 
         const grid = document.getElementById('main-grid');
+        var projectsArray = [];
+        var i = 0;
 
         projects.forEach(project => {
+            projectsArray[i] = project.name
             const col = document.createElement('div');
             col.classList.add('g-col-6', 'g-col-md-4');
 
@@ -19,14 +22,19 @@ async function getProjects() {
             proj_link.href = "Html/Project-page.html";
             proj_link.textContent = project.name;
 
+            const img1 = document.createElement('img');
+            img1.classList.add('proj-img')
+            img1.src = project.img1;
+            proj_link.appendChild(img1);
+
             // Crea un div per il nome del gioco
             const row = document.createElement('div');
             row.classList.add('project-name');
 
             row.appendChild(proj_link);
             col.appendChild(row);
-
             grid.appendChild(col);
+            i++;
         });
     } catch (error) {
         console.error('Errore nel recupero dei dati:', error);
