@@ -83,8 +83,41 @@
 
   /* Progetti */
   .projects-container {
-    height: 50vh;
+    height: 60vh;
+    width: 40vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vh;
   }
+
+  .arrow {
+    display: none;
+  }
+
+  .proj-col,
+  .focused-proj-col {
+    width: 70% !important;
+    opacity: 1 !important;
+    font-size: 2.5vh !important;
+    font-weight: 500 !important;
+    pointer-events: auto !important;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease !important;
+    text-decoration: none;
+  }
+
+  .proj-col:hover,
+  .focused-proj-col:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+  }
+
+  .proj-p {
+    font-size: 3vh;
+  }
+
 
 
   /* Contatti */

@@ -1,5 +1,6 @@
 @charset "UTF-8";
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 
@@ -267,34 +268,71 @@ header {
 }
 
 /* Projects css */
+.proj-paragraph {
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .projects-container {
-  width: 80vw;
+  display: flex;
+  width: 90vw;
   height: 22vw;
   background-color: #28446E;
   border-radius: 20px;
   margin-top: 1vw;
-  margin-bottom: 0.5vw;
-}
-.projects-container #main-grid {
-  display: flex;
-  justify-content: space-evenly;
+  margin-bottom: 1vw;
   align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
 }
-.projects-container .project-name {
-  font-size: 3vw;
-  font-weight: 500;
-  transition: transform 0.5s ease;
+.projects-container .proj-col, .projects-container .focused-proj-col {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+  transition: transform 0.5s ease, font-size 0.5s ease, opacity 0.5s ease, width 0.5s ease;
+  text-decoration: none;
 }
-.projects-container .project-name:hover {
+.projects-container .proj-col {
+  width: 25%;
+  font-size: 1.5vw;
+  text-decoration: none;
+  color: #CCFFFF;
+  opacity: 0.5;
+  margin: 0 1vw 0 1vw;
+  cursor: default;
+  pointer-events: none;
+  transition: transform 0.5s ease, width 0.5 ease;
+}
+.projects-container .focused-proj-col {
+  width: 40%;
+  opacity: 1;
+  font-size: 2.5vw;
+  color: #CCFFFF;
+  transition: transform 0.5s ease, width 0.5 ease;
+}
+.projects-container .focused-proj-col:hover {
   transform: translateY(-10px);
   cursor: pointer;
 }
-.projects-container .proj_link {
-  text-decoration: none;
-  color: #CCFFFF;
+
+.project-name {
   display: flex;
-  flex-direction: column;
+  text-align: center;
+  font-weight: 500;
 }
-.projects-container .proj-img {
-  width: 25vw;
+
+.slideshow {
+  display: flex;
+  justify-content: center;
+}
+
+.arrow {
+  font-weight: 500;
+  font-size: 5vw;
+  color: #28446E;
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }/*# sourceMappingURL=stileHome.css.map */

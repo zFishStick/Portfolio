@@ -29,15 +29,18 @@
         </div>
 
         <div class="container">
-            <p class="lh-lg mb-0 paragrafo text-center">In questa sezione puoi vedere vari progetti che ho sviluppato, da
-                progetti personali a quelli scolastici.
+            <p class="lh-lg mb-0 proj-p paragrafo proj-paragraph">In questa sezione puoi vedere vari progetti che ho sviluppato,
+                da progetti personali a quelli scolastici.
             </p>
-                    <div id="content" class="projects-container mx-auto">
-                        <div class="grid text-center" id="main-grid">
-                        </div>
-                    </div>
+            <div class="slideshow mx-auto">
+            <button id="prev" class="arrow left-arrow" onclick="updateMainProjects(this.id)"><</button>
+                <div id="main-grid" class="projects-container"></div>
+            <button id="next" class="arrow right-arrow" onclick="updateMainProjects(this.id)">></button>
+            </div>
+        </div>
+
         <div class="row mx-auto shake freccia-giù"><a href="#contatti"><i
-            class="fa-solid fa-arrow-down iconaScendi"></i></a></div>
+                    class="fa-solid fa-arrow-down iconaScendi"></i></a></div>
     </section>
 
 </body>

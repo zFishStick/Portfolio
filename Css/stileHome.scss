@@ -1,7 +1,8 @@
 $text_color: #28446E;
 $bg_color: #CCFFFF;
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 
@@ -122,7 +123,7 @@ header {
   margin-bottom: 2vw;
 }
 
-.freccia-giù{
+.freccia-giù {
   color: #28446E;
   font-size: 25px;
   -webkit-animation: shake 10s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
@@ -132,17 +133,24 @@ header {
 }
 
 @-webkit-keyframes shake {
-  0%, 100% {
+
+  0%,
+  100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
-  10%, 30%, 50%, 70% {
+  10%,
+  30%,
+  50%,
+  70% {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
 
-  20%, 40%, 60% {
+  20%,
+  40%,
+  60% {
     -webkit-transform: translateY(8px);
     transform: translateY(8px);
   }
@@ -159,17 +167,24 @@ header {
 }
 
 @keyframes shake {
-  0%, 100% {
+
+  0%,
+  100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 
-  10%, 30%, 50%, 70% {
+  10%,
+  30%,
+  50%,
+  70% {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
 
-  20%, 40%, 60% {
+  20%,
+  40%,
+  60% {
     -webkit-transform: translateY(8px);
     transform: translateY(8px);
   }
@@ -210,7 +225,7 @@ header {
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 15vw;
-  margin-bottom:15vw;
+  margin-bottom: 15vw;
   height: 100vh;
   scroll-margin-top: 2vh;
   color: #161E3C;
@@ -347,40 +362,75 @@ header {
 
 /* Projects css */
 
-.projects-container{
-  width: 80vw;
+.proj-paragraph{
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects-container {
+  display: flex;
+  width: 90vw;
   height: 22vw;
   background-color: $text_color;
   border-radius: 20px;
   margin-top: 1vw;
-  margin-bottom: 0.5vw;
-
-#main-grid {
-  display: flex;
-  justify-content: space-evenly;
+  margin-bottom: 1vw;
   align-items: center;
-}
+  text-align: center;
+  justify-content: space-evenly;
 
-.project-name {
-  font-size: 3vw;
-  font-weight: 500;
-  transition: transform 0.5s ease;
-
-  &:hover {
-    transform: translateY(-10px);
-    cursor: pointer;
+  .proj-col, .focused-proj-col{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px;
+    transition: transform 0.5s ease, font-size 0.5s ease, opacity 0.5s ease, width 0.5s ease;
+    text-decoration: none;
   }
-}
 
-.proj_link {
-  text-decoration: none;
-  color: $bg_color;
+    .proj-col {
+      width: 25%;
+      font-size: 1.5vw;
+      text-decoration: none;
+      color: $bg_color;
+      opacity: 0.5;
+      margin: 0 1vw 0 1vw;
+      cursor: default;
+      pointer-events: none;
+      transition: transform 0.5s ease, width 0.5 ease;
+    }
+
+    .focused-proj-col {
+      width: 40%;
+      opacity: 1;
+      font-size: 2.5vw;
+      color: $bg_color;
+      transition: transform 0.5s ease, width 0.5 ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .project-name {
+    display: flex;
+    text-align: center;
+    font-weight: 500;
+  }
+
+.slideshow {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
-.proj-img{
-  width: 25vw;
-}
-
+.arrow {
+  font-weight: 500;
+  font-size: 5vw;
+  color: $text_color;
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }

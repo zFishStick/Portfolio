@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@splidejs/splide": "^4.1.4",
     "@vercel/node": "^3.2.10",
     "aws-sdk": "^2.1687.0",
     "bootstrap-icons": "^1.10.5",
