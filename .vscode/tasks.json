@@ -6,12 +6,12 @@
         "type": "shell",
         "command": "node",
         "args": [
-          "server.js"  // Sostituisci con il nome del file principale del tuo server Express
+          "server.js"
         ],
         "isBackground": true,
         "problemMatcher": [],
         "runOptions": {
-          "runOn": "folderOpen"  // Avvia automaticamente all'apertura della cartella
+          "runOn": "folderOpen"
         }
       }
     ]
