@@ -1,136 +1,132 @@
-var allProjectsArray = []
-const grid = document.getElementById('main-grid');
-const containerWidth = grid.offsetWidth
-
-var leftStyle, activeStyle, rightStyle;
-
-var centerMatrix = new WebKitCSSMatrix();
-var leftMatrix = new WebKitCSSMatrix();
-var rightMatrix = new WebKitCSSMatrix();
-
+var arrayProjects = []
+const container = document.getElementById('projects-container');
+var currentIndex = 0;
 var buttonClicked = 0;
 
 async function getProjects() {
-    try {
-        const response = await fetch('/api/projects'); // Recupera i dati dalla collezione
-        const projects = await response.json();
+  try {
+    const response = await fetch('/api/projects'); // Recupera i dati dalla collezione
+    const projects = await response.json();
 
-        //var visibleProjectsArray = [];
-        var i = 0;
-        var projColClass = "proj-col"
+    let i = 0;
 
-        projects.forEach(project => {
-            if (i == 1) {
-                projColClass = "focused-proj-col"
-            }
+    projects.forEach(project => {
+      arrayProjects[i] = {
+        name: project.name,
+        img: project.img1,
+        shortDesc: project['short-description'],
+        longDesc: project['long-description']
+      };
+      i++;
+    });
+  } catch (error) {
+    console.error('Errore nel recupero dei dati:', error);
+  }
 
-            allProjectsArray[i] = project.name
-            const col = document.createElement('a');
-            col.classList.add(projColClass);
-
-            switch (i) {
-                case 0:
-                    col.id = 'left'
-                    break;
-                case 1:
-                    col.id = 'center'
-                    break;
-                case 2:
-                    col.id = 'right'
-                default:
-                    break;
-            }
-
-
-            col.onclick = function (event) {
-                event.preventDefault(); // Previeni la navigazione immediata
-                setPageProject(project.name, project['short-description'], project['long-description']);
-                window.location.href = "Html/Project-page.html"; // Naviga alla pagina dopo l'esecuzione
-            };
-            col.href = "Html/Project-page.html";
-            col.textContent = project.name
-
-            const img1 = document.createElement('img');
-            img1.classList.add('proj-img')
-            img1.src = project.img1;
-            col.appendChild(img1)
-
-            // Crea un div per il nome del gioco
-            const row = document.createElement('div');
-            row.classList.add('project-name');
-
-            row.appendChild(col);
-            grid.appendChild(col);
-            i++;
-            projColClass = "proj-col"
-        });
-
-    } catch (error) {
-        console.error('Errore nel recupero dei dati:', error);
-    }
 }
 
-getProjects();
-
-function updateMainProjects(id) {
-    buttonClicked++;
-    let leftProject = document.getElementById('left')
-    let rightProject = document.getElementById('right')
-    let activeProject = document.getElementById('center')
-
-    console.log("Prima della transizione: " + "Sinistra: " + leftProject.textContent);
-    console.log("Prima della transizione: " + "Centro: " + activeProject.textContent);
-    console.log("Prima della transizione: " + "Destra: " + rightProject.textContent);
-
-    let elementWidth = activeProject.offsetWidth;
-    let sideElementWidth = leftProject.offsetWidth
-
-    if (id == "next") {
-        var firstElement = allProjectsArray.pop();
-        allProjectsArray.unshift(firstElement);   
-    }
-    else if (id == "prev") {
-
-        var limit = 250
-        console.log(containerWidth, elementWidth, sideElementWidth);
-        console.log(containerWidth - elementWidth + limit);
-
-        var centerToLeftSlide = 16.5
-        var leftToRightSlide = 42.5
-        var rightToCenterSlide = 10.05
-
-        activeProject.className = "proj-col"
-        rightProject.className = "focused-proj-col" 
-
-        if (buttonClicked == 1) {
-            leftProject.style.transform = `translateX(${leftToRightSlide}em)`;
-            activeProject.style.transform = `translateX(-${centerToLeftSlide}em)`;     
-            rightProject.style.transform = `translateX(-${rightToCenterSlide}em`;
-        }
-        else if (buttonClicked == 2){
-            leftProject.style.transform = `translateX(${centerToLeftSlide}em)`
-            activeProject.style.transform = `translateX(-${leftToRightSlide}em)`;
-            rightProject.style.transform = `translateX(${rightToCenterSlide}em)`;
-        }
-        else{
-            leftProject.style.transform = `translateX(0px)`;
-            rightProject.style.transform = `translateX(0px)`;
-            activeProject.style.transform = `translateX(0px)`;
-            buttonClicked = 0;
-        }
-
-        console.log("btn:" + buttonClicked);
-        
-        leftProject.id = 'right'
-        activeProject.id = 'left'
-        rightProject.id = 'center'
-
-    }
+async function initialize() {
+  await getProjects(); // Aspetta che i progetti siano caricati
+  updateVisibleProjects(); // Ora aggiorna i progetti visibili
 }
+
+initialize()
+
+function updateVisibleProjects() {
+  const projectMappings = [
+    { divId: 'left-div', projectId: 'left'},
+    { divId: 'center-div', projectId: 'center'},
+    { divId: 'right-div', projectId: 'right'},
+    { divId: 'other-div', projectId: 'other'}
+  ];
+
+  setTimeout(() => {
+    projectMappings.forEach((mapping, index) => {
+      const projectDiv = document.getElementById(mapping.divId);
+      const projectImg = projectDiv.querySelector(`#${mapping.projectId}`);
+
+      const projectData = arrayProjects[(currentIndex + index) % arrayProjects.length]; // Usa l'indice corretto
+      console.log(projectData);
+
+      if (projectData) {
+        projectImg.src = projectData.img; // Assicurati che `projectData.img` sia l'immagine corretta
+        if (index == 1) {
+          projectImg.onclick = function (event) {
+            event.preventDefault(); // Previene la navigazione immediata
+            setPageProject(projectData.name, projectData.shortDesc, projectData.longDesc);
+            window.location.href = "Html/Project-page.html"; // Naviga alla pagina dopo l'esecuzione
+            projectImg.href = "Html/Project-page.html";
+          };
+        }
+      }
+
+
+
+    });
+  }, 500);
+}
+
+
+
+function leftToRight() {
+
+  currentIndex = (currentIndex - 1 + arrayProjects.length) % arrayProjects.length;
+  console.log(currentIndex);
+
+  updateVisibleProjects();
+
+  var blue = document.getElementById('right-div')
+  var green = document.getElementById('center-div')
+  var red = document.getElementById('left-div')
+  var yellow = document.getElementById('other-div')
+
+  blue.classList.add("rightToOther")
+
+  green.classList.add("centerToRight")
+
+  red.classList.add("leftToCenter")
+
+  yellow.classList.add('otherToLeft')
+
+  setTimeout(() => {
+    blue.classList.remove("rightToOther")
+    green.classList.remove("centerToRight")
+    red.classList.remove("leftToCenter")
+    yellow.classList.remove('otherToLeft')
+  }, 500)
+
+}
+
+function rightToLeft() {
+  currentIndex = (currentIndex + 1) % arrayProjects.length;
+  updateVisibleProjects();
+
+  var blue = document.getElementById('right-div')
+  var green = document.getElementById('center-div')
+  var red = document.getElementById('left-div')
+  var yellow = document.getElementById('other-div')
+
+  blue.classList.add("rightToCenter")
+
+  green.classList.add("centerToLeft")
+
+  red.classList.add("leftToOther")
+
+  yellow.classList.add('otherToRight')
+
+  setTimeout(() => {
+    blue.classList.remove("rightToCenter")
+    green.classList.remove("centerToLeft")
+    red.classList.remove("leftToOther")
+    yellow.classList.remove('otherToRight')
+  }, 500)
+}
+
+updateVisibleProjects();
 
 
 function setPageProject(proj_name, pro_desc, proj_long_desc) {
-    sessionStorage.setItem("proj_name", proj_name);
-    sessionStorage.setItem("proj_desc", pro_desc);
-    sessionStorage.setItem("proj_img", proj_long_desc);
+  sessionStorage.setItem("proj_name", proj_name);
+  sessionStorage.setItem("proj_desc", pro_desc);
+  sessionStorage.setItem("proj_img", proj_long_desc);
 }

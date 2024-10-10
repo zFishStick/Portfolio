@@ -1,34 +1,40 @@
-@media screen and (max-width: 768px) {
+/* Tablet */
+@media screen and (max-width: 993px) {
   header {
-    height: 41rem;
     margin-bottom: 0;
     display: flex;
     flex-direction: column;
-  }
-
-  .titoloPrincipale {
-    font-size: 17vw;
-  }
-
-  .listaMenu li {
     font-size: 4vw;
   }
 
+  .titoloPrincipale {
+    font-size: 3em;
+    margin-bottom: 0;
+  }
+
+  .list-h li{
+    font-size: 1em !important;
+  }
+
+  .listaMenu li {
+    font-size: 1.5em;
+  }
+
   .paragrafoPresentazione {
-    font-size: 6vw;
+    font-size: 3vw;
   }
 
   .ciao {
-    font-size: 8vw;
+    font-size: 5vw;
   }
 
   .tastoScrollPagina,
   .shake {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 
   .tastoScrollPagina {
-    margin-top: auto;
+    margin-bottom: 2vw;
   }
 
   /* Biography */
@@ -81,44 +87,10 @@
     width: 250px !important;
   }
 
-  /* Progetti */
-  .projects-container {
-    height: 60vh;
-    width: 40vh;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3vh;
+  .proj-paragraph{
+    text-align: center;
+    width: auto;
   }
-
-  .arrow {
-    display: none;
-  }
-
-  .proj-col,
-  .focused-proj-col {
-    width: 70% !important;
-    opacity: 1 !important;
-    font-size: 2.5vh !important;
-    font-weight: 500 !important;
-    pointer-events: auto !important;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.5s ease !important;
-    text-decoration: none;
-  }
-
-  .proj-col:hover,
-  .focused-proj-col:hover {
-    transform: translateY(-10px);
-    cursor: pointer;
-  }
-
-  .proj-p {
-    font-size: 3vh;
-  }
-
-
 
   /* Contatti */
   .profiliSocial {
@@ -150,5 +122,181 @@
   .icona-git {
     font-size: 50px;
   }
+
+}
+
+
+/* Mobile */
+@media screen and (max-width: 593px) {
+
+  header {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 4vw;
+  }
+
+  .titoloPrincipale {
+    font-size: 4em;
+    margin-bottom: 0;
+  }
+
+  .list-h{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin: 0 auto 0 auto;
+  }
+
+  .list-h li{
+    font-size: 2em !important;
+    margin: 0 2vw 0 2vw;
+  }
+
+  .listaMenu li {
+    font-size: 1em;
+  }
+
+  .paragrafoPresentazione {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.7em;
+  }
+
+  .ciao {
+    font-size: 2em;
+  }
+
+  .tastoScrollPagina,
+  .shake {
+    font-size: 1.5em;
+  }
+
+  .tastoScrollPagina {
+    margin-bottom: 2vw;
+  }
+
+  /* Biography */
+
+  .content {
+    text-align: center;
+  }
+
+  .content img {
+    width: 400px;
+    margin-bottom: 10px;
+  }
+
+  .content p {
+    font-size: 20px;
+    line-height: 35px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .biografia {
+    margin-bottom: 30px;
+    height: fit-content;
+    scroll-margin-top: 1vh;
+    color: #161E3C;
+    padding-top: 1rem;
+  }
+
+  .iconaScendi {
+    margin-top: 0;
+    font-size: 35px;
+  }
+
+  .content {
+    flex-direction: column-reverse;
+  }
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .immagineGabriel1 {
+    width: 250px !important;
+  }
+
+  .immagineProgrammi {
+    width: 250px !important;
+  }
+
+  .immagineTeam {
+    width: 250px !important;
+  }
+
+  .proj-paragraph{
+    text-align: center;
+    width: auto;
+  }
+
+  /* Contatti */
+  .profiliSocial {
+    height: 40rem;
+    width: 22rem;
+  }
+
+  .first-row,
+  .second-col {
+    width: fit-content !important;
+    justify-content: center !important;
+    align-items: center;
+    padding-right: 0 !important;
+  }
+
+  .listaSocial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .titolo-contatti {
+    font-size: 15px;
+  }
+
+  .github-link,
+  .icona-git {
+    font-size: 50px;
+  }
+
+.proj-paragraph{
+  font-size: 5vw;
+}
+
+/* Progetti */
+.projects-container {
+  height: 60vh;
+  width: 40vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3vh;
+}
+
+.arrow {
+  display: none;
+}
+
+.proj-col,
+.focused-proj-col {
+  width: 70% !important;
+  opacity: 1 !important;
+  font-size: 2.5vh !important;
+  font-weight: 500 !important;
+  pointer-events: auto !important;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease !important;
+  text-decoration: none;
+}
+
+.proj-col:hover,
+.focused-proj-col:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
 
 }

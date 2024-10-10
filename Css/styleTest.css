@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.biggest-project-container {
+    display: flex;
+    margin: 1vw auto 1vw auto;
+    width: 99vw;
+    height: 55vh;
+    background-color: rgb(127, 238, 255);
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    width: 97vw;
+    height: 100%;
+    background-color: aquamarine;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-proj{
+    display: flex;
+    width: 25vw;
+    height: 35vh;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.div-proj a{
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    font-size: 2vw;
+}
+
+.project {
+    width: 100%;
+    height: auto;
+    color: wheat;
+    transition: transform 0.5s ease opacity 0.5s ease;
+    cursor: pointer;
+}
+
+#left-div {
+    right: -1%;
+    opacity: 0.5;
+}
+
+#center-div {
+    transform: scale(1.5);
+    right: -12.5%;
+}
+
+#center-div:hover{
+    transform: scale(1.5) translateY(-0.5vw);
+  }
+
+#right-div {
+    right: -24.3%;
+    opacity: 0.5;
+}
+
+#other-div {
+    right: -25%;
+}
+
+/* To Left */
+.rightToCenter {
+    animation: rightToCenter 0.5s ease forwards;
+}
+
+.centerToLeft {
+    animation: centerToLeft 0.5s ease forwards;
+}
+
+.leftToOther {
+    animation: leftToOther 0.5s ease forwards;
+}
+
+.otherToRight {
+    animation: otherToRight 0.5s ease forwards;
+}
+
+@keyframes rightToCenter {
+    from {}
+
+    to {
+        opacity: 1;
+        transform: scale(1.5);
+        right: 12.8%;
+    }
+}
+
+@keyframes centerToLeft {
+    from {}
+
+    to {
+        transform: scale(1);
+        right: 24.3%;
+        opacity: 0.5;
+    }
+}
+
+@keyframes leftToOther {
+    from {}
+
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes otherToRight {
+    from{
+        right: -25%;
+    }
+
+    to{
+        right: 1%;
+        opacity: 0.5;
+    }
+}
+
+/* To Right */
+.rightToOther {
+    animation: rightToOther 0.5s ease forwards;
+}
+
+.centerToRight {
+    animation: centerToRight 0.5s ease forwards;
+}
+
+.leftToCenter {
+    animation: leftToCenter 0.5s ease forwards;
+}
+
+.otherToLeft {
+    animation: otherToLeft 0.5s ease forwards;
+}
+
+@keyframes rightToOther {
+    from {
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes centerToRight {
+    from{
+        right: -12.5%;
+    }
+
+    to{
+        opacity: 0.5;
+        transform: scale(1);
+        right: -49.5%;
+    }
+}
+
+@keyframes leftToCenter {
+    from{
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1.5);
+        right: -37.75%;
+    }
+}
+
+@keyframes otherToLeft {
+    from{
+        right: 100%;
+        opacity: 1;
+    }
+    to{
+        right: 74.8%;
+        opacity: 1;
+    }
+}
+
+.btns-div{
+    display: flex;
+    gap: 1vw;
+}
+
+.btns-div button{
+    font-size: 5vw;
+    font-weight: 500;
+    width: 5vw;
+    height: 5vw;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+

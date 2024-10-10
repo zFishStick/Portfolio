@@ -28,15 +28,20 @@
             </ul>
         </div>
 
-        <div class="container">
-            <p class="lh-lg mb-0 proj-p paragrafo proj-paragraph">In questa sezione puoi vedere vari progetti che ho sviluppato,
+        <div class="main-projects-container">
+            <p class="lh-lg mb-0 paragrafo proj-paragraph">In questa sezione puoi vedere vari progetti che ho sviluppato,
                 da progetti personali a quelli scolastici.
             </p>
-            <div class="slideshow mx-auto">
-            <button id="prev" class="arrow left-arrow" onclick="updateMainProjects(this.id)"><</button>
-                <div id="main-grid" class="projects-container"></div>
-            <button id="next" class="arrow right-arrow" onclick="updateMainProjects(this.id)">></button>
-            </div>
+            <div class="biggest-project-container">
+                <button onclick="leftToRight()"><</button>
+                <div id="projects-container">
+                    <div class="div-proj" id="left-div"><img id="left" class="project"></div>
+                    <div class="div-proj" id="center-div"><img id="center" class="project"></div>
+                    <div class="div-proj" id="right-div"><img id="right" class="project"></div>
+                    <div class="div-proj" id="other-div"><img id="other" class="project"></div>
+                  </div>
+                  <button onclick="rightToLeft()">></button>
+              </div>
         </div>
 
         <div class="row mx-auto shake freccia-giù"><a href="#contatti"><i

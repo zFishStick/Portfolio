@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.biggest-project-container {
+  display: flex;
+  margin: 1vw 0 1vw 0;
+  height: 43vh;
+  background-color: #28446E;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 1.5vw;
+}
+.biggest-project-container button {
+  font-size: 5vw;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #CCFFFF;
+}
+
+#projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  width: 90vw;
+  height: 60vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.div-proj {
+  display: flex;
+  width: 25vw;
+  height: 30vh;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+.project {
+  width: 100%;
+  height: auto;
+  color: wheat;
+  transition: transform 0.5s ease opacity 0.5s ease;
+  border-radius: 1.5vw;
+}
+
+#left-div {
+  right: -1%;
+  opacity: 0.5;
+}
+
+#center-div {
+  transform: scale(1.5);
+  right: -12.5%;
+  cursor: pointer;
+}
+#center-div:hover {
+  transform: scale(1.5) translateY(-0.5vw);
+}
+
+#right-div {
+  right: -24.3%;
+  opacity: 0.5;
+}
+
+#other-div {
+  right: -25%;
+}
+
+/* To Left */
+.rightToCenter {
+  animation: rightToCenter 0.5s ease forwards;
+}
+
+.centerToLeft {
+  animation: centerToLeft 0.5s ease forwards;
+}
+
+.leftToOther {
+  animation: leftToOther 0.5s ease forwards;
+}
+
+.otherToRight {
+  animation: otherToRight 0.5s ease forwards;
+}
+
+@keyframes rightToCenter {
+  to {
+    opacity: 1;
+    transform: scale(1.5);
+    right: 12.8%;
+  }
+}
+@keyframes centerToLeft {
+  to {
+    transform: scale(1);
+    right: 24.3%;
+    opacity: 0.5;
+  }
+}
+@keyframes leftToOther {
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes otherToRight {
+  from {
+    right: -25%;
+    opacity: 0.5;
+  }
+  to {
+    right: 1%;
+    opacity: 0.5;
+  }
+}
+/* To Right */
+.rightToOther {
+  animation: rightToOther 0.5s ease forwards;
+}
+
+.centerToRight {
+  animation: centerToRight 0.5s ease forwards;
+}
+
+.leftToCenter {
+  animation: leftToCenter 0.5s ease forwards;
+}
+
+.otherToLeft {
+  animation: otherToLeft 0.5s ease forwards;
+}
+
+@keyframes rightToOther {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes centerToRight {
+  from {
+    right: -12.5%;
+  }
+  to {
+    opacity: 0.5;
+    transform: scale(1);
+    right: -49.5%;
+  }
+}
+@keyframes leftToCenter {
+  to {
+    opacity: 1;
+    transform: scale(1.5);
+    right: -37.75%;
+  }
+}
+@keyframes otherToLeft {
+  from {
+    right: 100%;
+    opacity: 0.5;
+  }
+  to {
+    right: 74.8%;
+    opacity: 0.5;
+  }
+}/*# sourceMappingURL=styleSlideshow.css.map */
